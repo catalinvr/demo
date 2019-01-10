@@ -1,11 +1,21 @@
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.RequestMapping;
+package com.example.demo.controller;
 
-@RestController
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
 public class RootController {
-    @RequestMapping("/")
-    public String index() {
-        return "Greetings from Spring Boot!";
+
+
+    @Value("${spring.application.name}")
+    String appName;
+
+    @GetMapping("/")
+    public String homePage(Model model) {
+        model.addAttribute("appName", appName);
+        return "home";
     }
 
 }

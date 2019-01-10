@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head><title>Home Page</title></head>
+<style>
+    body, html {
+        height: 100%;
+        margin: 0;
+    }
+
+    .bgimg {
+        background-image: url('https://image.redbull.com/rbcom/052/2017-10-27/d782b942-ef22-418a-b192-9492f6d7fa3b/0012/0/0/0/1600/2400/1500/1/red-bull-rampage-2017-kurt-sorge.jpg');
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        color: white;
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        font-size: 25px;
+    }
+
+    .topleft {
+        position: absolute;
+        top: 0;
+        left: 16px;
+    }
+
+    .bottomleft {
+        position: absolute;
+        bottom: 0;
+        left: 16px;
+    }
+
+    .middle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    hr {
+        margin: auto;
+        width: 40%;
+    }
+</style>
+<body>
+
+<div class="bgimg">
+    <div class="topleft">
+        <img src="https://images.redbullshop.com/is/image/RedBullSalzburg/Navi_RBM?wid=270&&fmt=png-alpha" alt="RBMH Logo">
+    </div>
+    <div class="middle">
+        <h1>Welcome to <span th:text="${appName}">Our App</h1>
+        <hr>
+        <p>:)</p>
+    </div>
+    <div class="bottomleft">
+        <p>RBMH</p>
+    </div>
+</div>
+
+</body>
+</html>
